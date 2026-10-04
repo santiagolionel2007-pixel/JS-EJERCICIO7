@@ -1,0 +1,29 @@
+<select id="procesador">
+  <option value="400">Intel I3</option>
+  <option value="600">Intel I5</option>
+  <option value="800">Intel I7</option>
+</select>
+
+<select id="monitor">
+  <option value="250">Samsung 20'</option>
+  <option value="350">Samsung 22'</option>
+  <option value="550">Samsung 26'</option>
+</select>
+
+<select id="disco">
+  <option value="300">500 Gb</option>
+  <option value="440">1 Tb</option>
+  <option value="500">3 Tb</option>
+</select>
+
+<button onclick="calcular()">Calcular</button>
+<input type="text" id="total" readonly>
+
+<script>
+function calcular() {
+  let p = parseInt(document.getElementById("procesador").value);
+  let m = parseInt(document.getElementById("monitor").value);
+  let d = parseInt(document.getElementById("disco").value);
+  document.getElementById("total").value = "Total: $" + (p + m + d);
+}
+</script>
